@@ -3,7 +3,9 @@ export function RepositoryItem({ repository }) {
         <li>
             <strong>{repository?.name ?? "defaut"}</strong>
             <p>{repository?.description ?? "description defaut"}</p>
-            <a href={repository?.link ?? "link defaut"}>Acessar Repositório</a>
+            <a href={repository?.html_url ?? "link defaut"}>
+                Acessar Repositório
+            </a>
         </li>
     );
 }
