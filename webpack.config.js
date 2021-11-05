@@ -6,14 +6,14 @@ const isDevelopment = process.env.NODE_ENV !== "production";
 
 module.exports = {
     mode: isDevelopment ? "development" : "production",
-    entry: path.resolve(__dirname, "src", "index.jsx"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
     devtool: isDevelopment ? "eval-source-map" : "source-map",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
     },
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".tsx", ".tsx"],
     },
     devServer: {
         static: {
@@ -30,7 +30,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx$/,
+                test: /\.(t|j)sx$/,
                 exclude: /node_modules/,
                 use: [
                     {
