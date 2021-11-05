@@ -9,8 +9,14 @@ const repository = {
 };
 // https://api.github.com/users/victor-magaldi
 //https://api.github.com/users/victor-magaldi/repos
+interface Repository{
+     name:string,
+    description:string,
+    html_url: string
+}
+
 export function RepositoryList() {
-    const [repositories, setRepositories] = useState([]);
+    const [repositories, setRepositories] = useState<Repository[]>([]);
     useEffect(() => {
         if (repositories.length === 0) {
             fetch("https://api.github.com/users/victor-magaldi/repos")
@@ -23,7 +29,7 @@ export function RepositoryList() {
             <h1>Lista de repositórios</h1>
             <ul>
                 {repositories.map((repo) => (
-                    <RepositoryItem key={repo?.id} repository={repo} />
+                    <RepositoryItem key={repo?.name} repository={repo} />
                 ))}
             </ul>
         </section>
