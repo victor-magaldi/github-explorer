@@ -9,6 +9,11 @@ Projeto inicial do bootcamp da Ignite da Rocketseat, esse tem como o objetivo tr
 Foram usados novos recursos do React como:
 
 -   React 
+-   Sass (compilador css para dar um poder maior ao css)
+-   Webpack  
+-   Babel
+-   Typescript
+-   Hooks do React 
 
 **Server:**
 
