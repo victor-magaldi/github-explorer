@@ -1,6 +1,6 @@
 # Gihub Explorer 🚀
 
-Dashboard desenvolvida usando o chakraUi e possui recursos graficos como "react-apexcharts"
+Projeto inicial do bootcamp da Ignite da Rocketseat, esse tem como o objetivo treinar a configuração mais manual do React Inserindo integração com typescript usando outras ferramentas de front como webpack.
 
 ## Tecnologias 🔥
 
